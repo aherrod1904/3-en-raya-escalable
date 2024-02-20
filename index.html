@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="preGame">
+      <h1>Bienvenido al 3 en raya escalable</h1>
+      <label for="dimension">De qué tamaño quieres el tablero</label>
+      <input id="dimension" type="text" name="dimension">
+      <label for="rondas">Numero de rondas que quieres jugar</label>
+      <input id="rondas" type="text" name="rondas">
+      <label for="machine"><input type="checkbox" name="machine" id="machine"> Jugar contra la máquina</label>
+      <button id="createTable">Crear tablero</button>
+
+    </div>
+    <div class="inGame hide">
+      <button id="resetGame">Reiniciar</button>
+      <button class="clearGameButton" id="limp">Limpiar Tablero</button>
+    </div>
+    <div id="marcador"></div>
+    <div class="img img1" id="img1"><a href="./riseofkingdoms.html"><img src="./img/anuncio-1.png" alt=""></a></div>
+    <div id="tablero"></div>
+    <div class="img img2" id="img2"><a href="#"><img src="./img/anuncio-2.png" alt=""></a></div>
+    <div class="clearGame"><button class="clearGameButton">Volver a jugar</button></div>
+    <div class="movimientos" id="movimientos"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

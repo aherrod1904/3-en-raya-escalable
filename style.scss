@@ -1,0 +1,285 @@
+body{
+  background-image: url(./img/illustration.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.preGame{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 87vh;
+  h1{
+    color: transparent;
+    background-image: linear-gradient(to left, yellow, lawngreen, tomato, rgb(189, 89, 189), yellow);    
+    background-clip: text;
+    animation: color 4s linear 1s infinite running;
+    background-size: 1300%;  
+    position: relative;
+    top: -75px;
+    font-size: 50px;
+    
+  }
+  label{
+    font-size: 20px;
+    color:black;
+    padding-bottom: 15px;
+  }
+  input{
+    margin-bottom: 50px;
+    padding-inline: 5px;
+    padding-block: 5px;
+    border: none;
+    background-color: lightgreen;
+    color: black;
+    border-radius: 5px;
+  }
+
+}
+@keyframes color {
+  from {
+      background-position: 0% 50%;
+  }
+
+  to {
+      background-position: 100% 50%;
+  }
+}
+ul{
+  color: black;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+button{
+  padding-inline: 25px;
+  padding-block: 15px;
+  background-color: darkorange;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer; 
+}
+
+
+#tablero {
+  display: grid;
+  margin: 0 auto;
+  margin-top: 5%;
+  grid-gap: 10px;
+  color: white;
+  max-width: 500px;
+  >div {
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    &[data-libre='']:hover{
+      background-color: #444;
+      cursor: pointer;
+      color:white;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 40px;
+    }
+    &[data-libre='X'],&[data-libre='O'],&[data-libre='-']{
+      cursor: not-allowed;
+      background-color:gray ;
+      color:gold;
+      font-size: 40px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    &[data-libre='X']:hover{
+      color: gold;
+    }
+    &[data-libre='O']{
+      color:lime;
+      font-size: 40px;
+    }
+    &[data-libre='O']:hover{
+      color: lime;
+    }
+    &[data-libre='']{
+      background-color:gray ;
+    }
+  }
+}
+
+
+#dimension.error:focus{
+  border-color: red;
+  outline-color: red;
+}
+
+.preGame{
+  display: block;
+  &.hide{
+    display: none;
+  }
+}
+
+.inGame{
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  &.hide{
+    display: none;
+  }
+}
+
+.clearGame {
+  display: none;
+  margin-top: 20px;
+  &.show{
+    display: block;
+    text-align: center;
+  }
+}
+
+.movimientos{
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  background-color:rgb(39, 39, 39);
+  color: white;
+  border-color: black;
+  height: 100px;
+  overflow-y: scroll;
+  padding-inline: 15px;
+  width: max-content;
+  border-style:solid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+img{
+  width: 160px;
+  height: 80vh;
+
+}
+
+
+.img1{
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 150px;
+
+  
+}
+
+.img2{
+  position: absolute;
+  top: 70px;
+  right: 150px;
+  display: none;
+}
+
+.img{
+  cursor: pointer;
+  &::after{
+    content: 'x';
+    padding-inline: 2px;
+    color:blue;
+    background-color: lightgray;
+    cursor: pointer;
+    position: absolute;
+    right: 0.3px;
+    top: 0;
+  }
+
+  &::before{
+    content: '-';
+    padding-inline: 4px;
+    color:blue;
+    background-color: lightgray;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 0;
+  }
+}
+
+.risediv{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rise{
+  width: 100%;
+}
+
+.riseh1{
+  color: black;
+}
+
+@media (max-width: 1300px){
+  .img1{
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 90px;
+  
+    
+  }
+  
+  .img2{
+    position: absolute;
+    top: 70px;
+    right: 90px;
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 1080px){
+  .img1{
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 40px;
+  
+    
+  }
+  
+  .img2{
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    display: none;
+  }
+}
+
+
+@media (max-width: 940px){
+
+  img{
+    width: 160px;
+    height: 10vh;
+  
+  }
+  .img1{
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+  }
+  
+  .img2{
+    position: absolute;
+    top: 70px;
+    right: 90px;
+    display: none !important;
+  }
+}
