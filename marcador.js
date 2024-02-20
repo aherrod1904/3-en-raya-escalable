@@ -41,6 +41,7 @@ class Marcador {
 
   ganadorFin(){
     if (this.#jugadores[0].puntos > this.#jugadores[1].puntos){
+      
       return String('el jugador X ha ganado');
     }else if (this.#jugadores[1].puntos > this.#jugadores[0].puntos){
       return String('el jugador O ha ganado');
