@@ -17,6 +17,7 @@ div.preGame{
     animation: color 4s linear 1s infinite running;
     background-size: 1300%;  
     position: relative;
+    text-align: center;
     top: -75px;
     font-size: 50px;
     
@@ -25,13 +26,14 @@ div.preGame{
     font-size: 20px;
     color:black;
     padding-bottom: 15px;
+    text-align: center;
   }
   input{
     margin-bottom: 50px;
     padding-inline: 5px;
     padding-block: 5px;
     border: none;
-    background-color: lightgreen;
+    background-color:palegreen;
     color: black;
     border-radius: 5px;
   }
@@ -160,7 +162,7 @@ button{
 
 img{
   width: 160px;
-  height: 80vh;
+  height: 680px;
 
 }
 
@@ -223,7 +225,14 @@ img{
   color: black;
 }
 
-@media (max-width: 1300px){
+.img3{
+  display: none !important;
+}
+
+@media (max-width: 1530px){
+  body{
+    height: 98vh;
+  }
   .img1{
     display: none;
     position: absolute;
@@ -263,14 +272,24 @@ img{
 
 
 @media (max-width: 940px){
+  body{
+    height: 99vh;
+    overflow-y: hidden;
+  }
 
+
+  div.preGame{
+    padding-top: 20px;
+  }
   img{
-    width: 160px;
-    height: 10vh;
+    width: 360px;
+    height: 80px;
   
   }
+
+
   .img1{
-    display: none;
+    display: none !important;
     position: absolute;
     top: 70px;
     left: 20px;
@@ -281,6 +300,11 @@ img{
     top: 70px;
     right: 90px;
     display: none !important;
+  }
+  .img3{
+    display: none;
+    position: absolute;
+    bottom: -7px;
   }
 }
 
