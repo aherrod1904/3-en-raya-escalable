@@ -12,7 +12,6 @@ const preGame = document.querySelector('.preGame');
 const inGame = document.querySelector('.inGame');
 const img1 = document.getElementById('img1');
 const img2 = document.getElementById('img2');
-const img3 = document.getElementById('img3');
 
 
 let tablero;
@@ -133,11 +132,17 @@ resetButton.addEventListener('click', (e) => {
   round.focus();
   img1.style.display = 'none';
   img2.style.display = 'none';
+  let gana = document.getElementById('ganadorf');
+  gana.style.display = "none";
+
 
   let mov = document.getElementById('movimientos');
   if (mov.hasChildNodes){
     while (mov.childNodes.length >=1){
       mov.removeChild(mov.firstChild)
+      mov.style.display = 'none';
     }
   }
+
+
 });

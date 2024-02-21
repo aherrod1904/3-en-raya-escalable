@@ -200,18 +200,10 @@ class Tablero {
         document.querySelector('.clearGame').classList.toggle('show');
       }else{
         document.getElementById('limp').style.display = "none";
-        Toastify({
-          text: `Resultado final: ${this.#marcador.ganadorFin()}`,
-          newWindow: true,
-          close: true,
-          gravity: "top", // `top` or `bottom`
-          position: "center", // `left`, `center` or `right`
-          stopOnFocus: true, // Prevents dismissing of toast on hover
-          style: {
-            background: "green",
-          },
-          onClick: function(){} // Callback after click
-        }).showToast();
+        let gana = document.getElementById('ganadorf');
+        gana.style.display = "flex";
+        gana.style.animation = "ease-in 2s linear";
+        gana.innerHTML = `${this.#marcador.ganadorFin()}`;
         
       }
       this.#round--;
@@ -238,18 +230,10 @@ class Tablero {
 
         }else{
           document.getElementById('limp').style.display = "none";
-          Toastify({
-            text: `${this.#marcador.ganadorFin()}`,
-            newWindow: true,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "center", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            style: {
-              background: "green",
-            },
-            onClick: function(){} // Callback after click
-          }).showToast();
+          let gana = document.getElementById('ganadorf');
+          gana.style.display = "flex";
+          gana.style.animation = "ease-in 2s linear";
+          gana.innerHTML = `${this.#marcador.ganadorFin()}`;
         }
         this.#round--;
       }

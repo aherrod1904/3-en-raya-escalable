@@ -41,12 +41,14 @@ class Marcador {
 
   ganadorFin(){
     if (this.#jugadores[0].puntos > this.#jugadores[1].puntos){
-      
-      return String('el jugador X ha ganado');
+      let text = '<h1> El ganador es el jugador X </h1>'
+      return text;
     }else if (this.#jugadores[1].puntos > this.#jugadores[0].puntos){
-      return String('el jugador O ha ganado');
+      let text = '<h1> El ganador es el jugador O </h1>'
+      return text;
     }else{
-      return String('ha sido un empate de puntos')
+      let text = '<h1> Ha sido un empate </h1>'
+      return text;
     }
   }
 }
